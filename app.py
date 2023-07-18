@@ -6,4 +6,4 @@ app.register_blueprint(orders_blueprint)
 
 @app.route('/')
 def index():
-    return "hhhhhome page nothing here"
+    return "<h1>hhhhhome page nothing here</h1>\n<p><a href='./orders'>orders</a></p>"
