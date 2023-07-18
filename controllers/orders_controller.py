@@ -9,4 +9,4 @@ def index():
 
 @orders_blueprint.route("/orders/<order_number>")
 def order(order_number):
-    return render_template("order.html",title=f"Order number {order_number}",order=orders[int(order_number)])
+    return render_template("order.html",title=f"Order number {int(order_number)+1}",order=orders[int(order_number)])

@@ -11,8 +11,10 @@
     <ul>
         {% for order in orders_for_jinja %}
             <li>
-                {{order.name}} on {{order.date[0]}}/{{order.date[1]}}/{{order.date[2]}}: 
-                <b>{{order.quantity}} {{order.item}}{% if order.quantity>1 %}s{% endif %}</b>
+                <a href="./orders/{{loop.index-1}}">
+                    {{order.name}} on {{order.date[0]}}/{{order.date[1]}}/{{order.date[2]}}: 
+                    <b>{{order.quantity}} {{order.item}}{% if order.quantity>1 %}s{% endif %}</b>
+                </a>
             </li>
         {% endfor %}
     </ul>
