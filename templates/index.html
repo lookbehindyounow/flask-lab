@@ -9,11 +9,10 @@
 <body>
     <h1>{{title}}</h1>
     <ul>
-        {% for task in tasks_for_jinja %}
+        {% for order in orders_for_jinja %}
             <li>
-                {{ task.title }}: <b>{{ task.description }}</b>{% if task.done %}
-                    <i>  DONE YES</i>
-                {% endif %}
+                {{order.name}} on {{order.date[0]}}/{{order.date[1]}}/{{order.date[2]}}: 
+                <b>{{order.quantity}} {{order.item}}{% if order.quantity>1 %}s{% endif %}</b>
             </li>
         {% endfor %}
     </ul>
